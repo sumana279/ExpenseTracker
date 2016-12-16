@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+		<property name="connection.url">jdbc:oracle:thin:@//sdc-scan-r5:1521/wmomse16_be</property>
+		<property name="connection.username">customer</property>
+		<property name="connection.password">cuse16t</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<!-- <property name="hibernate.format_sql">true</property> -->
+		<property name="hibernate.show_sql">false</property>
+
+		<!-- <mapping resource="employee.hbm.xml" /> -->
+
+		<!-- <mapping class="org.arpit.java2blog.bean.ExpenseTracker" /> -->
+		<mapping resource="payload.hbm.xml" />
+
+	</session-factory>
+
+</hibernate-configuration>  
+	
